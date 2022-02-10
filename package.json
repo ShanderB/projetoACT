@@ -1,0 +1,11 @@
+{
+  "name": "comics",
+  "version": "0.0.1",
+  "description": "",
+  "main": "comics.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "author": ""
+}
