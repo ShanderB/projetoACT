@@ -7,14 +7,6 @@ const factory = function ($http, $q) {
   const query = '&apikey=' + publicKey + '&hash=' + hash + '&ts=1'
   const limit = 50
 
-  const find = function () {
-    const def = $q.defer()
-    const url = baseUrl + 'public/characters?limit=' + limit + query
-    $http.get(url).success(def.resolve).error(def.reject)
-
-    return def.promise
-  }
-
   const findOne = function (id) {
     const def = $q.defer()
     const url = baseUrl + 'public/characters/' + id + query.replace('&', '?')
@@ -36,22 +28,22 @@ const factory = function ($http, $q) {
     this.busy = false
     this.characters = []
 
-    this.load = function () {
+    this.load = () => {
       if (this.busy) {
         return
       }
       this.busy = true
-      findNext(this.offset).then(function (results) {
+      findNext(this.offset).then((results) => {
         const chars = results.data.results
 
-        chars.forEach(function (item) {
+        chars.forEach((item) => {
           this.characters.push(item)
-        }.bind(this))
+        })
 
         this.offset++
         this.busy = false
-      }.bind(this))
-    }.bind(this)
+      })
+    }
   }
 
   return {
