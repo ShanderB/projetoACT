@@ -12,5 +12,4 @@ node_modules
 Thumbs.db
 .eslintrc.js
 
-package.json
 package-json.json
