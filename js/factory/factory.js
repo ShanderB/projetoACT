@@ -5,7 +5,7 @@ const factory = function ($http, $q) {
   const baseUrl = 'http://gateway.marvel.com/v1/'
   const hash = 'bd4b447a65ef5d6b174f87cf9db6d2db'
   const query = '&apikey=' + publicKey + '&hash=' + hash + '&ts=1'
-  const limit = 50
+  const limit = 100
 
   const findOne = function (id) {
     const def = $q.defer()

@@ -17,6 +17,8 @@ a:hover {
 
 .main-container {
   overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
 }
 
 .character-container {
@@ -24,14 +26,13 @@ a:hover {
 }
 
 .character { /* Card */
-  width: 20%;
-  height: auto;
   padding-bottom: 20%;
-  float: left;
-  background-size: cover;
-  position: relative;
   opacity: 0.5;
   transition: opacity 0.5s ease;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .character h3 {
