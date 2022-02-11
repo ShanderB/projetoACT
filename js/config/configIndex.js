@@ -1,4 +1,4 @@
-const setStates = function ($stateProvider, $urlRouterProvider) {
+const setStates = function ($stateProvider) {
   $stateProvider.state('index', {
     url: '',
     controler: 'MainCtrl',
@@ -10,5 +10,7 @@ const setStates = function ($stateProvider, $urlRouterProvider) {
       controller: 'SingleCharacter'
     })
 }
+
+setStates.$inject = ['$stateProvider']
 
 export default setStates

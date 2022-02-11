@@ -61,4 +61,9 @@ const factory = function ($http, $q) {
   }
 }
 
+factory.$inject = [
+  '$http',
+  '$q'
+]
+
 export { factoryName, factory }

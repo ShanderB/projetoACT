@@ -1,6 +1,6 @@
 const findComicControllerName = 'SingleCharacter'
 
-const findComicController = function ($scope, $rootScope, $stateParams, ComicBooks, $window) {
+const findComicController = function ($scope, $rootScope, $stateParams, ComicBooks) {
   const id = $stateParams.id
   ComicBooks.findOne(id).then(function (result) {
     const data = result.data.results[0]
@@ -17,5 +17,12 @@ const findComicController = function ($scope, $rootScope, $stateParams, ComicBoo
     $rootScope.$broadcast('contentLoaded')
   })
 }
+
+findComicController.$inject = [
+  '$scope',
+  '$rootScope',
+  '$stateParams',
+  'ComicBooks'
+]
 
 export { findComicController, findComicControllerName }
