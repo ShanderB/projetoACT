@@ -14,11 +14,13 @@
 </head>
 
 <body ng-controller="MainCtrl">
-	<div ui-view infinite-scroll="vm.load()" infinite-scroll-distance="0" infinite-scroll-disabled='vm.busy'
-		class="main-container"></div>
-	<div class="credit">
-		<a href="http://marvel.com" target="_blank">Data provided by Marvel. © 2014 Marvel</a>
-	</div>
+	<div
+	ui-view
+	infinite-scroll="vm.load()"
+	infinite-scroll-distance="0"
+	infinite-scroll-disabled='vm.busy'
+	class="main-container"
+	></div>
 </body>
 
 </html>

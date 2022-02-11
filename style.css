@@ -23,74 +23,51 @@ a:hover {
   -webkit-transform: translateZ(0);
 }
 
-.character {
+.character { /* Card */
   width: 20%;
   height: auto;
   padding-bottom: 20%;
   float: left;
-  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   opacity: 0.5;
-  -webkit-transition: opacity 0.5s ease;
-  -moz-transition: opacity 0.5s ease;
-  -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
 
 .character h3 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
   background-color: #ffffff;
   padding: 1%;
-  margin: 0px;
 }
 
-.character:hover {
+.character:hover { /* Fade out */
   cursor: pointer;
   opacity: 1;
 }
 
-.popup {
+.popup {  /* Open popup */
   position: fixed;
   top: 100px;
-  left: 50%;
-  z-index: 1000;
+  left: 38%;
   width: 500px;
   height: 500px;
-  margin-left: -250px;
   background-color: #ffffff;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
-  -ms-transform: scale(2);
-  -o-transform: scale(2);
   transform: scale(2);
-  visibility: hidden;
   opacity: 0;
 }
 
 .popup h1 {
   margin-top: 0px;
 }
-.popup.show {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
+.popup.show { /* Open popup */
   transform: scale(1);
-  visibility: visible;
   opacity: 1;
 }
 
-.popup .bottom {
+.popup .bottom { /* Text area popup */
   padding: 15px;
   width: 100%;
   bottom: 0px;
@@ -98,7 +75,7 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.popup .close {
+.popup .close {  /* Close button */
   position: absolute;
   width: 30px;
   height: 30px;
@@ -113,13 +90,4 @@ a:hover {
 
 .popup .close:hover {
   cursor: pointer;
-}
-
-.credit {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  z-index: 1000;
-  padding: 5px;
-  background-color: rgba(255, 255, 255, 0.5);
 }
