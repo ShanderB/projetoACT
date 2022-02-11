@@ -1,7 +1,13 @@
 const findComicControllerName = 'SingleCharacter'
 
-const findComicController = function ($scope, $rootScope, $stateParams, ComicBooks) {
+const findComicController = function (
+  $scope,
+  $rootScope,
+  $stateParams,
+  ComicBooks
+) {
   const id = $stateParams.id
+
   ComicBooks.findOne(id).then(function (result) {
     const data = result.data.results[0]
     $scope.characterName = data.name
