@@ -1,18 +1,18 @@
 const popUpDirectiveName = 'popup'
 
-const popUpDirective = function() {
-	var linker = function(scope,element,attrs) {
-		scope.$on('contentLoaded',function() {
-			element.addClass('show');
-		});
-		scope.close = function() {
-			element.removeClass('show');
-		};
-	};
-	return {
-		restrict: 'E',
-		link: linker
-	};
+const popUpDirective = function () {
+  const linker = function (scope, element) {
+    scope.$on('contentLoaded', function () {
+      element.addClass('show')
+    })
+    scope.close = function () {
+      element.removeClass('show')
+    }
+  }
+  return {
+    restrict: 'E',
+    link: linker
+  }
 }
 
-export {popUpDirective, popUpDirectiveName}
+export { popUpDirective, popUpDirectiveName }

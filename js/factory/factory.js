@@ -31,10 +31,11 @@ const factory = function ($http, $q) {
     return def.promise
   }
 
-  const LoadMore = function ($scope) {
+  const LoadMore = function () {
     this.offset = 0
     this.busy = false
     this.characters = []
+
     this.load = function () {
       if (this.busy) {
         return
@@ -42,9 +43,11 @@ const factory = function ($http, $q) {
       this.busy = true
       findNext(this.offset).then(function (results) {
         const chars = results.data.results
+
         chars.forEach(function (item) {
           this.characters.push(item)
         }.bind(this))
+
         this.offset++
         this.busy = false
       }.bind(this))
