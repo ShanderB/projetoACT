@@ -19,14 +19,17 @@ a:hover {
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  background-color: #000000;
 }
 
 .character-container {
   -webkit-transform: translateZ(0);
+  --bs-gutter-x: 5px;
+  --bs-gutter-y: 5px;
 }
 
 .character { /* Card */
-  padding-bottom: 20%;
+  padding-bottom: 60%;
   opacity: 0.5;
   transition: opacity 0.5s ease;
   height: 100%;
