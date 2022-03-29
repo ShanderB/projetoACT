@@ -37,7 +37,10 @@ const factory = function ($http, $q) {
         const chars = results.data.results
 
         chars.forEach((item) => {
-          this.characters.push(item)
+          let thumb = item.thumbnail.path.includes('image_not_available')
+          if (!thumb) { //dont insert card without image
+            this.characters.push(item)
+          }
         })
 
         this.offset++
