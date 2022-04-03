@@ -20,6 +20,20 @@
 </head>
 
 <body ng-controller="MainCtrl">
+	<!-- search box hover -->
+
+	<div class="container-title">
+		<div class="row">
+			<div class="col-md-12">
+				<input class="search-box" placeholder="Type comic here." id="searchInput" ng-model="searchText"></input>
+			</div>
+			<div class="col-md-12">
+				<div class="header">
+					<h1>Marvel Comics</h1>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div
 	infinite-scroll="vm.load()"
 	infinite-scroll-distance="0"
